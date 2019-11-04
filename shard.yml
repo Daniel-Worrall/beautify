@@ -1,0 +1,16 @@
+name: beautify
+version: 0.1.0
+
+description: Crystal binding for the JS-Beautify NPM Package via duktape.cr
+
+authors:
+  - Daniel Worrall <Daniel.Worrall@hotmail.co.uk>
+
+crystal: 0.31.1
+
+license: MIT
+
+dependencies:
+  duktape:
+    github: jessedoyle/duktape.cr
+    version: ~> 0.18.1
