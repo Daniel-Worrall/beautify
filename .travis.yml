@@ -3,6 +3,7 @@ language: crystal
 script:
   - crystal spec
   - crystal tool format --check
+  - crystal bin/ameba.cr
   - crystal docs
 deploy:
   provider: pages
