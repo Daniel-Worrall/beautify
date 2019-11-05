@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/Daniel-Worrall/beautify.svg?branch=master)](https://travis-ci.org/Daniel-Worrall/beautify)
 [![GitHub release](https://img.shields.io/github/release/Daniel-Worrall/beautify.svg)](https://github.com/Daniel-Worrall/beautify/releases)
 
-beautify embeds the [js-beautify](https://github.com/beautify-web/js-beautify) package with Crystal bindings via [duktape.cr](https://github.com/svaarala/duktape), inspired by [html-minifier](https://github.com/sam0x17/html-minifier).
+beautify embeds the [js-beautify](https://github.com/beautify-web/js-beautify) package with [Crystal](http://crystal-lang.org) bindings via [duktape.cr](https://github.com/svaarala/duktape), inspired by [html-minifier](https://github.com/sam0x17/html-minifier).
 
 It can be used to beautify HTML, JS or CSS content.
 
