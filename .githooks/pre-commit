@@ -1,0 +1,12 @@
+#!/bin/sh
+
+changed_cr_files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.cr$')
+[ -z "$changed_cr_files" ] && exit 0
+
+crystal tool format $changed_cr_files
+
+shards check || exit 1
+
+bin/ameba -f flycheck $changed_cr_files || exit 1
+
+crystal spec --fail-fast >/dev/null || echo "Specs failed."; exit 1
