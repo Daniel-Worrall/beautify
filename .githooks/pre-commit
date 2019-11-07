@@ -1,0 +1,20 @@
+#!/bin/sh
+
+changed_cr_files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.cr$')
+[ -z "$changed_cr_files" ] #&& exit 0
+
+crystal tool format --check $changed_cr_files >/dev/null
+ret_code=$?
+
+if [ 0 -ne $ret_code ]; then
+  echo "Files need formatting. Use \`crystal tool format\` and recommit."
+  exit $ret_code
+fi
+
+crystal spec --fail-fast >/dev/null
+ret_code=$?
+
+if [ 0 -ne $ret_code ]; then
+  echo "Specs failed. Ensure specs pass and recommit."
+  exit $ret_code
+fi
