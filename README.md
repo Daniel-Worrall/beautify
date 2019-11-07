@@ -32,6 +32,8 @@ Beautify.css(css_content)
 
 ## Contributing
 
+There is a provided [githook](https://githooks.com/) that will check code formatting and specs before commiting. You can run `make init` or `git config core.hooksPath .githooks` to use this.
+
 1. Fork it (<https://github.com/Daniel-Worrall/beautify/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
