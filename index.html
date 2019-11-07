@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.30.1">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="js/doc.js"></script>
+<script type="text/javascript">
+  CrystalDoc.base_path = "";
+</script>
+
+  <meta id="repository-name" content="github.com/Daniel-Worrall/beautify">
+  <title>README - github.com/Daniel-Worrall/beautify</title>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="repository-links">
+      <a href="index.html">README</a>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class=" " data-id="github.com/Daniel-Worrall/beautify/Beautify" data-name="beautify">
+      <a href="Beautify.html">Beautify</a>
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1>beautify</h1>
+
+<p><a href="https://daniel-worrall.github.io/beautify/" target="_blank"><img src="https://img.shields.io/badge/docs-latest-green.svg" alt="docs"/></a>
+<a href="https://travis-ci.org/Daniel-Worrall/beautify" target="_blank"><img src="https://travis-ci.org/Daniel-Worrall/beautify.svg?branch=master" alt="Build Status"/></a>
+<a href="https://github.com/Daniel-Worrall/beautify/releases" target="_blank"><img src="https://img.shields.io/github/release/Daniel-Worrall/beautify.svg" alt="GitHub release"/></a></p>
+
+<p>beautify embeds the <a href="https://github.com/beautify-web/js-beautify" target="_blank">js-beautify</a> package with <a href="http://crystal-lang.org" target="_blank">Crystal</a> bindings via <a href="https://github.com/svaarala/duktape" target="_blank">duktape.cr</a>, inspired by <a href="https://github.com/sam0x17/html-minifier" target="_blank">html-minifier</a>.</p>
+
+<p>It can be used to beautify HTML, JS or CSS content.</p>
+
+<h2>Installation</h2>
+
+<ol><li>Add the dependency to your <code>shard.yml</code>:</li></ol>
+
+<p><code></code>`yaml
+   dependencies:</p>
+
+<pre><code> beautify:
+   github: <span class="t">Daniel</span><span class="o">-</span><span class="t">Worrall</span><span class="s">/beautify</code></pre>
+
+<p><code></code>`</p>
+
+<ol><li>Run <code>shards install</code></li></ol>
+
+<h2>Beautify</h2>
+
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;beautify&quot;</span>
+
+<span class="t">Beautify</span>.js(js_content)
+<span class="t">Beautify</span>.html(html_content)
+<span class="t">Beautify</span>.css(css_content)</code></pre>
+
+<h2>Contributing</h2>
+
+<p>There is a provided <a href="https://githooks.com/" target="_blank">githook</a> that will check code formatting and specs before commiting. You can run <code>make init</code> or <code>git config core.hooksPath .githooks</code> to use this.</p>
+
+<ol><li>Fork it (&lt;https://github.com/Daniel-Worrall/beautify/fork>)</li><li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li><li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li><li>Push to the branch (<code>git push origin my-new-feature</code>)</li><li>Create a new Pull Request</li></ol>
+
+<h2>Contributors</h2>
+
+<ul><li><a href="https://github.com/Daniel-Worrall" target="_blank">Daniel Worrall</a> - creator and maintainer</li></ul>
+</div>
+</body>
+</html>
