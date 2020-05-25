@@ -1,0 +1,17 @@
+version: 2
+jobs:
+  build: 
+    working_directory: ~/beautify
+    docker:
+      - image: crystallang/crystal:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "shard.lock" }}
+      - run: shards install
+      - save_cache:
+          key: dependency-cache-{{ checksum "shard.lock" }}
+          paths:
+            - ./lib
+      - run: crystal spec
+      - run: crystal tool format --check
