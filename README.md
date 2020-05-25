@@ -30,6 +30,22 @@ Beautify.html(html_content)
 Beautify.css(css_content)
 ```
 
+By default, these run on a single runtime which lazily initialise each beautify package.
+
+Runtimes can be created as needed and called in a similar fashion.
+
+```crystal
+require "beautify"
+
+runtime = Beautify::Runtime.new
+
+runtime.js(js_content)
+runtime.html(html_content)
+runtime.css(css_content)
+```
+
+Runtimes are not parallel safe. A mutex around runtime calls are appropriate.
+
 ## Contributing
 
 There is a provided [githook](https://githooks.com/) that will check code formatting and specs before commiting. You can run `make init` or `git config core.hooksPath .githooks` to use this.
