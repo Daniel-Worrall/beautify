@@ -16,6 +16,7 @@ It can be used to beautify HTML, JS or CSS content.
    dependencies:
      beautify:
        github: Daniel-Worrall/beautify
+       version: ~> 0.2.0
    ```
 
 2. Run `shards install`

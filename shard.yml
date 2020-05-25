@@ -1,5 +1,5 @@
 name: beautify
-version: 0.1.0
+version: 0.2.0
 
 description: Crystal binding for the JS-Beautify NPM Package via duktape.cr
 
