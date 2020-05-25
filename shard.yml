@@ -6,7 +6,7 @@ description: Crystal binding for the JS-Beautify NPM Package via duktape.cr
 authors:
   - Daniel Worrall <Daniel.Worrall@hotmail.co.uk>
 
-crystal: 0.31.1
+crystal: 0.34.0
 
 license: MIT
 
